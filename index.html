@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dourado">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Para Mikeli ✝ — Sandro</title>
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#140d1a">
+<meta name="application-name" content="Para Mikeli">
+<meta name="mobile-web-app-capable" content="yes">
+<!-- iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Para Mikeli">
+<link rel="apple-touch-icon" href="icons/icon.svg">
+<link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="para-mikeli/styles.css">
+</head>
+<body class="deck">
+
+<!-- ===================== SPRITE DE ÍCONES CRISTÃOS ===================== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cross" viewBox="0 0 24 24">
+    <path d="M10 1.5h4v6h6v4h-6v11h-4v-11H4v-4h6z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-dove" viewBox="0 0 100 100">
+    <path fill="currentColor" d="M90 20c-7-2-15 1-21 7-6-6-16-8-24-4C12 36 12 50 4 56c-3 2-1 7 3 6 6-1 11-4 15-8-1 7-5 12-11 16-3 2-1 7 3 6 12-3 22-12 28-23 6 6 16 7 24 2 11-7 14-21 17-29 2-5-2-9-7-9-3 0-6 2-8 5 1-3 2-6 3-9 1-4-1-7-5-8zM70 33a3 3 0 1 1-3 3 3 3 0 0 1 3-3z"/>
+  </symbol>
+  <symbol id="i-rings" viewBox="0 0 70 44">
+    <g fill="none" stroke="currentColor" stroke-width="3">
+      <circle cx="27" cy="24" r="15"/>
+      <circle cx="43" cy="24" r="15"/>
+    </g>
+    <path d="M35 4l3 6h-6z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-bible" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M5 3h12a2 2 0 0 1 2 2v15a1 1 0 0 1-1 1H6a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2z"/>
+    <path d="M12 7v7M9.5 10.5h5" stroke="#1a1018" stroke-width="1.6" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 1.5c1.2 4.2 5.5 5.6 5.5 10.5a5.5 5.5 0 0 1-11 0c0-2.2 1-3.6 2.3-4.7-.1 2.1 1 3.4 2.1 3.4 1.1 0 1.6-1 1.4-2.3-.4-2.7-2.3-4-2.3-6.9z"/>
+  </symbol>
+  <symbol id="i-heartcross" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 21.6C5 15.6 3 11.7 3 8.2A4.6 4.6 0 0 1 12 6a4.6 4.6 0 0 1 9 2.2c0 3.5-2 7.4-9 13.4z"/>
+    <path d="M11 8.4h2v1.8h1.8v2H13V16h-2v-3.8H9.2v-2H11z" fill="#1a1018"/>
+  </symbol>
+</svg>
+
+<!-- ===================== INTRO · CARTA ===================== -->
+<div id="intro" class="intro" role="button" tabindex="0" aria-label="Toque para abrir a carta">
+  <div class="env-stage">
+    <div class="env-eyebrow">✦&nbsp; ECLESIASTES 4:12 &nbsp;✦</div>
+    <div class="envelope" aria-hidden="true">
+      <span class="env-base"></span>
+      <span class="env-letter">
+        <span class="env-mono">M &amp; S</span>
+        <i></i><i></i><i class="short"></i>
+      </span>
+      <span class="env-front"></span>
+      <span class="env-flap"></span>
+      <span class="env-seal"><svg class="ic"><use href="#i-cross"/></svg></span>
+      <svg class="env-heart e1"><use href="#i-dove"/></svg>
+      <svg class="env-heart e2"><use href="#i-heartcross"/></svg>
+    </div>
+    <div class="env-hint">toque para abrir</div>
+  </div>
+</div>
+
+<!-- ===================== POMBAS FLUTUANTES ===================== -->
+<svg class="dove-fly" aria-hidden="true"><use href="#i-dove"/></svg>
+<svg class="dove-fly dove-2" aria-hidden="true"><use href="#i-dove"/></svg>
+
+<!-- ============================ CAPA ============================ -->
+<section class="hero" data-screen-label="Capa">
+  <svg class="sticker screen float ic-cross" style="top:9%;left:6%;width:46px;--r:-8deg" aria-hidden="true"><use href="#i-cross"/></svg>
+  <svg class="sticker screen float b ic-dove" style="top:6%;right:2%;width:72px;--r:10deg" aria-hidden="true"><use href="#i-dove"/></svg>
+  <svg class="sticker screen float c ic-cross" style="bottom:14%;left:9%;width:34px;--r:-6deg;opacity:.55" aria-hidden="true"><use href="#i-cross"/></svg>
+
+  <div class="wrap">
+    <div class="vi rise">✦ &nbsp;EM CRISTO, NÓS DOIS&nbsp; ✦</div>
+    <div class="tarot rise d1">FELIZ DIA DOS NAMORADOS</div>
+    <div class="for rise d1">Mikeli</div>
+    <span class="amp rise d2">&amp; Sandro — em Cristo</span>
+    <svg class="hero-symbol rise d2" aria-hidden="true"><use href="#i-rings"/></svg>
+    <p class="blurb rise d3">Um cantinho da internet feito com oração e carinho.
+       Role devagar — <em>fiz tudo isso pra você.</em></p>
+    <div class="scrolldown rise d4">deslize<i></i></div>
+  </div>
+</section>
+
+<!-- ===================== COMO TUDO COMEÇOU ===================== -->
+<section class="origin" data-screen-label="Como começou">
+  <svg class="sticker screen float c ic-dove" style="bottom:8%;right:7%;width:48px;--r:-8deg;opacity:.45" aria-hidden="true"><use href="#i-dove"/></svg>
+  <div class="wrap">
+    <div class="eyebrow rise">onde tudo começou</div>
+    <h2 class="rise d1">como Deus uniu a gente</h2>
+    <ol class="timeline rise d2">
+      <li class="tl-item">
+        <span class="tl-dot"></span>
+        <div class="tl-text">
+          <div class="tl-when"><span data-meet-date>06.04.2023</span></div>
+          <div class="tl-what">a gente se conheceu</div>
+        </div>
+      </li>
+      <li class="tl-item">
+        <span class="tl-dot fill"></span>
+        <div class="tl-text">
+          <div class="tl-when"><span data-since-date>15.12.2024</span></div>
+          <div class="tl-what">começamos a namorar</div>
+        </div>
+      </li>
+    </ol>
+    <p class="origin-note rise d3" data-origin-gap></p>
+  </div>
+</section>
+
+<!-- ========================== CONTADOR ========================== -->
+<section class="counter" data-screen-label="Contador">
+  <svg class="sticker screen float ic-cross" style="top:6%;right:8%;width:34px;--r:12deg;opacity:.5" aria-hidden="true"><use href="#i-cross"/></svg>
+  <div class="wrap">
+    <p class="since rise">desde <span data-since-date>15.12.2024</span></p>
+    <h2 class="rise d1">a gente caminha junto há</h2>
+    <div class="clock rise d2" data-clock>
+      <div class="cell"><div class="num" data-days>0</div><div class="lab">dias</div></div>
+      <div class="cell"><div class="num" data-hrs>00</div><div class="lab">horas</div></div>
+      <div class="cell"><div class="num" data-mins>00</div><div class="lab">min</div></div>
+      <div class="cell"><div class="num" data-secs>00</div><div class="lab">seg</div></div>
+    </div>
+    <p class="tail rise d3">…e que seja até a volta de Cristo <span class="tail-ic"><svg class="ic"><use href="#i-cross"/></svg></span></p>
+  </div>
+</section>
+
+<!-- ===================== NOSSA HISTÓRIA ===================== -->
+<section class="story" data-screen-label="Nossa história">
+  <div class="wrap head" style="text-align:center;margin-bottom:34px">
+    <div class="eyebrow rise">os capítulos da gente</div>
+    <h2 class="rise d1">nossa história</h2>
+  </div>
+  <div class="wrap">
+    <ol class="story-line">
+      <li class="st-item rise">
+        <span class="st-dot fill"></span>
+        <div class="st-card">
+          <img class="st-photo" src="uploads/juntos-uma-carne.jpeg" alt="o dia que viramos nós" loading="lazy">
+          <div class="st-when">15.12.2024</div>
+          <div class="st-title">o dia que viramos nós</div>
+          <p class="st-text">o “sim” que mudou tudo. a partir daqui, o que Deus uniu ninguém separa.</p>
+        </div>
+      </li>
+      <li class="st-item rise">
+        <span class="st-dot"></span>
+        <div class="st-card">
+          <img class="st-photo" src="uploads/juntos-memorias.jpeg" alt="nossas melhores memórias" loading="lazy">
+          <div class="st-when">ao longo de tudo</div>
+          <div class="st-title">nossas melhores memórias</div>
+          <p class="st-text">um montão de momentos que guardo com gratidão — e ainda tem muito vindo.</p>
+        </div>
+      </li>
+      <li class="st-item rise">
+        <span class="st-dot fill"></span>
+        <div class="st-card">
+          <img class="st-photo" src="uploads/juntos-dias-especiais.jpeg" alt="hoje" loading="lazy">
+          <div class="st-when">hoje</div>
+          <div class="st-title">hoje</div>
+          <p class="st-text">e a gente segue, de mãos dadas, olhando pra Cristo, todo dia.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== VERSÍCULO · CORDÃO DE TRÊS DOBRAS ===================== -->
+<section class="verse-sec" data-screen-label="Versiculo">
+  <div class="wrap">
+    <div class="eyebrow rise">o versículo da gente</div>
+    <div class="cord rise d1" aria-hidden="true">
+      <svg viewBox="0 0 240 60" preserveAspectRatio="none">
+        <path class="strand s1" d="M4 30 C40 6 80 6 120 30 C160 54 200 54 236 30"/>
+        <path class="strand s2" d="M4 30 C40 54 80 54 120 30 C160 6 200 6 236 30"/>
+        <path class="strand s3" d="M4 30 C40 30 80 12 120 30 C160 48 200 30 236 30"/>
+      </svg>
+    </div>
+    <blockquote class="verse rise d1">
+      “E, se alguém quiser prevalecer contra um, os dois lhe resistirão;
+      e o <b>cordão de três dobras</b> não se quebra tão depressa.”
+    </blockquote>
+    <p class="verse-ref rise d2">Eclesiastes 4:12</p>
+    <p class="verse-note rise d2">três dobras: <b>você</b>, <b>eu</b> e, no centro de tudo, <b>Deus</b>.
+      Enquanto Ele for o nosso meio, nada nos separa.</p>
+  </div>
+</section>
+
+<!-- ========================== GALERIA ========================== -->
+<section class="gallery" data-screen-label="Galeria">
+  <div class="wrap head">
+    <div class="eyebrow rise">o nosso filme</div>
+    <h2 class="rise d1">a gente, em fotos</h2>
+  </div>
+  <div class="wrap polas">
+    <figure class="pola rise"><span class="tape"></span>
+      <img src="uploads/juntos-colossenses.jpeg" alt="nós dois">
+      <figcaption class="cap">acima de tudo, o amor — o elo perfeito · Cl 3.14</figcaption>
+    </figure>
+    <figure class="pola rise"><span class="tape"></span>
+      <img src="uploads/juntos-uma-carne.jpeg" alt="nós dois">
+      <figcaption class="cap">o que Deus uniu, ninguém separe · Mt 19.6</figcaption>
+    </figure>
+    <figure class="pola rise"><span class="tape"></span>
+      <img src="uploads/juntos-memorias.jpeg" alt="nós dois">
+      <figcaption class="cap">cada memória com você é um presente</figcaption>
+    </figure>
+    <figure class="pola rise"><span class="tape"></span>
+      <img src="uploads/juntos-inspira.jpeg" alt="nós dois">
+      <figcaption class="cap">seu amor me inspira a ser melhor</figcaption>
+    </figure>
+    <figure class="pola rise"><span class="tape"></span>
+      <img src="uploads/juntos-dias-especiais.jpeg" alt="nós dois">
+      <figcaption class="cap">você transformou meus dias comuns em especiais</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ======================== NOSSA MÚSICA ======================== -->
+<section class="music" data-screen-label="Musica">
+  <div class="wrap head" style="text-align:center;margin-bottom:30px">
+    <div class="eyebrow rise">toca essa que é a nossa</div>
+  </div>
+  <div class="wrap">
+    <div class="player rise d1">
+      <div class="now"><i></i><span>nossa música</span></div>
+      <div class="disc-wrap">
+        <div class="disc-glow"></div>
+        <div class="disc">
+          <span class="disc-ic"><svg class="ic"><use href="#i-cross"/></svg></span>
+        </div>
+      </div>
+      <audio data-audio src="uploads/musica.mp3" preload="metadata"></audio>
+      <div class="track">
+        <div class="t-name" data-song-name>Amo ao Senhor de Todo o Meu Coração</div>
+        <div class="t-art" data-song-artist>Estevão Ewald</div>
+      </div>
+      <div class="bar"><i></i></div>
+      <div class="times"><span>0:00</span><span>0:00</span></div>
+      <div class="ctrls">
+        <button aria-label="anterior">⏮</button>
+        <button class="play" aria-label="tocar">►</button>
+        <button aria-label="próxima">⏭</button>
+      </div>
+    </div>
+    <p class="lyric rise d2">“amo ao Senhor de todo o meu coração…”<br>
+      <span>toda vez que toca, eu agradeço a Deus por você.</span></p>
+    <div style="text-align:center">
+      <a class="spotify-link rise d2" data-spotify href="#" target="_blank" rel="noopener"
+         style="margin-top:6px">
+        ♫ ouvir no Spotify</a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== A CARTA =========================== -->
+<section class="letter" data-screen-label="Carta">
+  <div class="wrap head" style="text-align:center;margin-bottom:26px">
+    <div class="eyebrow rise">do Sandro, pra você</div>
+  </div>
+  <div class="wrap">
+    <div class="paper-stage rise d1">
+    <article class="paper">
+      <svg class="print-cross" aria-hidden="true"><use href="#i-cross"/></svg>
+      <div class="to">minha Mikeli,</div>
+      <div class="date">carta nº 01 · dia dos namorados</div>
+      <p><span class="drop">E</span>ste site guarda algumas das nossas fotos, mas o que ele
+        realmente tenta guardar é a gratidão que sinto por ter você na minha vida.</p>
+      <p>Desde que você chegou, eu cresci muito como pessoa. Você me ajudou a enxergar meus
+        erros, a amadurecer minhas atitudes e a me tornar alguém melhor. Muitas das mudanças
+        que aconteceram em mim foram inspiradas pelo amor, pela paciência e pelo exemplo que
+        você me dá todos os dias. Ao seu lado, estou deixando de ser apenas um menino e
+        aprendendo, pouco a pouco, a ser o homem que Deus deseja que eu seja.</p>
+      <p>Quero que você saiba que estou me esforçando muito para ser cada vez melhor. Melhor
+        para Deus, melhor para mim e melhor para você. Tenho sonhos que vão muito além do
+        presente. Sonho com o dia em que construiremos nossa casa, viveremos nossas
+        experiências, enfrentaremos juntos os desafios da vida, formaremos nossa família e
+        compartilharemos cada conquista que Deus preparar para nós.</p>
+      <p>Também desejo ser o seu abrigo. Quero ser alguém em quem você possa confiar, descansar
+        e encontrar segurança nos dias bons e nos dias difíceis. Assim como você tem sido uma
+        bênção para mim, quero ser uma bênção para você.</p>
+      <p>Mas, acima de tudo, desejo que nunca percamos de vista aquilo que realmente importa:
+        <b>Jesus</b>. Ele é o autor da nossa história, a fonte do nosso amor e Aquele a quem
+        amamos e aguardamos. Minha oração é que, a cada dia, nós possamos amá-Lo mais, servi-Lo
+        melhor e caminhar mais perto dEle.</p>
+      <p>Que nosso relacionamento seja sempre conduzido por Sua vontade, que nosso amor cresça
+        com o passar dos anos e que permaneçamos unidos, de mãos dadas, olhando para Cristo,
+        até o glorioso dia da Sua volta.</p>
+      <p>Enquanto esse dia não chega, quero continuar escolhendo você todos os dias, construindo
+        sonhos ao seu lado e agradecendo a Deus por ter escrito uma história tão bonita para nós.</p>
+      <p><em>Eu te amo, hoje mais do que ontem, e amanhã mais do que hoje.</em></p>
+      <div class="sign">— Sandro<small>pra sempre seu, em Cristo</small></div>
+    </article>
+    <div class="wax"><svg class="ic"><use href="#i-cross"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MOTIVOS · BARALHO ===================== -->
+<section class="reasons" data-screen-label="Motivos">
+  <div class="wrap head" style="text-align:center">
+    <div class="eyebrow rise">as bênçãos que você é</div>
+    <h2 class="rise d1">por que agradeço a Deus por você</h2>
+    <p class="reasons-sub rise d2">arraste e toque numa carta pra virar <svg class="ic-mini"><use href="#i-cross"/></svg></p>
+  </div>
+  <div class="lovers-stage rise d2">
+    <button class="lv-nav prev" type="button" aria-label="carta anterior">&#8249;</button>
+    <div class="lovers-rail" data-deck></div>
+    <button class="lv-nav next" type="button" aria-label="próxima carta">&#8250;</button>
+  </div>
+</section>
+
+<!-- ===================== MOMENTOS DIVERTIDOS ===================== -->
+<section class="fun" data-screen-label="Divertidos">
+  <div class="wrap head" style="text-align:center;margin-bottom:30px">
+    <div class="eyebrow rise">sem pose, sem filtro</div>
+    <h2 class="rise d1">nossa bagunça preferida</h2>
+    <p class="fun-sub rise d2">porque amar também é rir junto 😄</p>
+  </div>
+  <div class="wrap fun-grid">
+    <figure class="fun-card rise"><img src="uploads/zuada-1.jpeg" alt="careta" loading="lazy"><figcaption>modo sério: desativado</figcaption></figure>
+    <figure class="fun-card rise"><img src="uploads/zuada-6.jpeg" alt="beijo no carro" loading="lazy"><figcaption>até de cabeça pra baixo eu te escolho</figcaption></figure>
+    <figure class="fun-card rise"><img src="uploads/zuada-3.jpeg" alt="cara de confuso" loading="lazy"><figcaption>“namoro é fácil”, disseram</figcaption></figure>
+    <figure class="fun-card rise"><img src="uploads/zuada-4.jpeg" alt="bateu o sono" loading="lazy"><figcaption>bateu o sono, mas o amor não</figcaption></figure>
+    <figure class="fun-card rise"><img src="uploads/zuada-5.jpeg" alt="rindo" loading="lazy"><figcaption>rindo à toa, como sempre</figcaption></figure>
+    <figure class="fun-card rise"><img src="uploads/zuada-2.jpeg" alt="passeio" loading="lazy"><figcaption>parceira de aventura ✨</figcaption></figure>
+  </div>
+</section>
+
+<!-- ============================ FECHO ============================ -->
+<section class="outro" data-screen-label="Fecho">
+  <svg class="sticker screen float b ic-dove" style="top:12%;left:8%;width:54px;--r:-10deg;opacity:.55" aria-hidden="true"><use href="#i-dove"/></svg>
+  <div class="wrap">
+    <svg class="closing-symbol rise" aria-hidden="true"><use href="#i-heartcross"/></svg>
+    <h2 class="rise d1">eu te amo</h2>
+    <p class="sub rise d2">hoje, amanhã e até a volta de Cristo.</p>
+    <button class="tapheart rise d3" type="button">
+      <span class="hh"><svg class="ic"><use href="#i-cross"/></svg></span>
+      toque aqui
+    </button>
+    <p class="stamp rise d3">Mikeli <b>&amp;</b> Sandro · em Cristo — &#8734;</p>
+  </div>
+</section>
+
+<!-- PWA: seção de instalação no fim da página + modais por plataforma -->
+<section id="pwa-install-section" hidden>
+  <div class="pwa-install-wrap">
+    <p class="pwa-install-hint">leve a gente pra tela inicial</p>
+    <button id="pwa-install" type="button">
+      <span class="pwa-heart" aria-hidden="true">✝</span>
+      <span>Instalar como app</span>
+    </button>
+  </div>
+</section>
+
+<div id="pwa-ios-modal" class="pwa-modal" hidden>
+  <div class="pwa-modal-card" role="dialog" aria-modal="true" aria-labelledby="pwa-ios-title">
+    <h3 id="pwa-ios-title">Instalar no iPhone</h3>
+    <p class="pwa-modal-sub">O Safari não tem botão automático. Em 3 passos:</p>
+    <ol class="pwa-steps">
+      <li><strong>1.</strong> Toque em <strong>Compartilhar</strong> <span class="pwa-key">⬆️</span> na barra do Safari.</li>
+      <li><strong>2.</strong> Role e toque em <strong>Adicionar à Tela de Início</strong>.</li>
+      <li><strong>3.</strong> Toque em <strong>Adicionar</strong> no canto superior direito.</li>
+    </ol>
+    <button type="button" class="pwa-modal-close">Entendi</button>
+  </div>
+</div>
+
+<div id="pwa-android-modal" class="pwa-modal" hidden>
+  <div class="pwa-modal-card" role="dialog" aria-modal="true" aria-labelledby="pwa-android-title">
+    <h3 id="pwa-android-title">Instalar no Android</h3>
+    <p class="pwa-modal-sub">Pelo menu do Chrome:</p>
+    <ol class="pwa-steps">
+      <li><strong>1.</strong> Toque no menu <strong>⋮</strong> no canto superior direito.</li>
+      <li><strong>2.</strong> Toque em <strong>Instalar app</strong> (ou <strong>Adicionar à tela inicial</strong>).</li>
+      <li><strong>3.</strong> Toque em <strong>Instalar</strong>.</li>
+    </ol>
+    <button type="button" class="pwa-modal-close">Entendi</button>
+  </div>
+</div>
+
+<script src="para-mikeli/app.js"></script>
+<script>
+  (function () {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js', { scope: './' }).catch(() => {});
+      });
+    }
+
+    const ua = navigator.userAgent || '';
+    const isIos = /iphone|ipad|ipod/i.test(ua) && !window.MSStream;
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches
+      || window.navigator.standalone === true;
+    if (isStandalone) return;
+
+    const section = document.getElementById('pwa-install-section');
+    const btn = document.getElementById('pwa-install');
+    const iosModal = document.getElementById('pwa-ios-modal');
+    const androidModal = document.getElementById('pwa-android-modal');
+    let deferredPrompt = null;
+
+    const openModal  = (m) => { m.hidden = false; };
+    const closeModal = (m) => { m.hidden = true; };
+
+    section.hidden = false;
+
+    window.addEventListener('beforeinstallprompt', e => {
+      e.preventDefault();
+      deferredPrompt = e;
+    });
+    window.addEventListener('appinstalled', () => {
+      deferredPrompt = null;
+      section.hidden = true;
+    });
+
+    btn.addEventListener('click', async () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const c = await deferredPrompt.userChoice;
+        deferredPrompt = null;
+        if (c.outcome === 'accepted') section.hidden = true;
+        return;
+      }
+      if (isIos) openModal(iosModal);
+      else openModal(androidModal);
+    });
+
+    [iosModal, androidModal].forEach(m => {
+      m.querySelector('.pwa-modal-close').addEventListener('click', () => closeModal(m));
+      m.addEventListener('click', e => { if (e.target === m) closeModal(m); });
+    });
+  })();
+</script>
+
+</body>
+</html>

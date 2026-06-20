@@ -1,0 +1,27 @@
+{
+  "name": "Para Mikeli — Sandro",
+  "short_name": "Para Mikeli",
+  "description": "Nossa história, em Cristo, em um lugar só.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#140d1a",
+  "theme_color": "#140d1a",
+  "lang": "pt-BR",
+  "categories": ["lifestyle", "personalization"],
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
