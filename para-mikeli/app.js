@@ -8,26 +8,14 @@
      >>> EDITE AQUI <<<  (datas, música)
      ============================================================ */
   const CONFIG = window.__PARA_MIKELI = window.__PARA_MIKELI || {
-    meetDate:  '2023-04-06T00:00:00',   // dia em que se conheceram (ajuste se quiser)
     startDate: '2024-12-15T00:00:00',   // dia em que começaram a namorar
     songName:  'Amo ao Senhor de Todo o Meu Coração',
     songArtist:'Estevão Ewald',
   };
 
-  /* ---- Datas: formatar e diferença em anos/meses ---- */
+  /* ---- Datas: formatar ---- */
   const pad = (n) => String(n).padStart(2, '0');
   const fmtDate = (d) => pad(d.getDate()) + '.' + pad(d.getMonth() + 1) + '.' + d.getFullYear();
-  function gapPhrase(from, to) {
-    if (isNaN(from) || isNaN(to) || to <= from) return '';
-    let months = (to.getFullYear() - from.getFullYear()) * 12 + (to.getMonth() - from.getMonth());
-    if (to.getDate() < from.getDate()) months--;
-    const years = Math.floor(months / 12);
-    const rem = months % 12;
-    const parts = [];
-    if (years) parts.push(years + (years === 1 ? ' ano' : ' anos'));
-    if (rem) parts.push(rem + (rem === 1 ? ' mês' : ' meses'));
-    return parts.join(' e ') || 'pouquinho tempo';
-  }
 
   /* ---- Contador ao vivo ---- */
   function tickCounter() {
@@ -247,13 +235,6 @@
       encodeURIComponent(CONFIG.songName + ' ' + CONFIG.songArtist);
     const startD = new Date(CONFIG.startDate);
     if (!isNaN(startD)) document.querySelectorAll('[data-since-date]').forEach((n) => n.textContent = fmtDate(startD));
-    const meetD = new Date(CONFIG.meetDate);
-    if (!isNaN(meetD)) document.querySelectorAll('[data-meet-date]').forEach((n) => n.textContent = fmtDate(meetD));
-    const gapEl = document.querySelector('[data-origin-gap]');
-    if (gapEl) {
-      const g = gapPhrase(meetD, startD);
-      gapEl.textContent = g ? g + ' depois, Deus uniu a gente ✝' : '';
-    }
     tickCounter();
   }
 
