@@ -9,8 +9,8 @@ const PRECACHE = [
   './',
   './index.html',
   './manifest.json',
-  './para-mikeli/styles.css',
-  './para-mikeli/app.js',
+  './para-mikeli/styles.css?v=2',
+  './para-mikeli/app.js?v=2',
   './icons/icon.svg',
 ];
 
