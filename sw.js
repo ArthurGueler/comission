@@ -2,7 +2,7 @@
 // Cache-first para assets estáticos; network-first para HTML.
 // Mudar VERSION força atualização do cache em todos os clients.
 
-const VERSION = 'v1';
+const VERSION = 'v2';
 const CACHE = `para-mikeli-${VERSION}`;
 
 const PRECACHE = [
