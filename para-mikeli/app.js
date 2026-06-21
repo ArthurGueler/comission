@@ -83,8 +83,10 @@
     };
 
     const hasAudio = audio && audio.getAttribute('src');
+    let autoStarting = false; // evita que o gesto que iniciou o autoplay pause logo em seguida
 
     btn.addEventListener('click', () => {
+      if (autoStarting) { autoStarting = false; return; }
       if (hasAudio) {
         if (audio.paused) audio.play().catch(() => {});
         else audio.pause();
@@ -121,6 +123,29 @@
       document.querySelectorAll('.ctrls button:not(.play)').forEach((b) => {
         b.addEventListener('click', () => { audio.currentTime = 0; });
       });
+
+      /* ---- Autoplay: já abre tocando ---- */
+      audio.loop = true; // música de fundo, em loop
+
+      // 1) Tenta tocar direto (funciona se já houve interação antes — PWA, retorno, etc.)
+      const tryAutoplay = () => { audio.play().catch(() => {}); };
+      if (audio.readyState >= 1) tryAutoplay();
+      else audio.addEventListener('loadedmetadata', tryAutoplay, { once: true });
+
+      // 2) Se o navegador bloquear, começa no PRIMEIRO gesto do usuário.
+      //    O toque em "toque para abrir" já serve. O play() precisa ser SÍNCRONO
+      //    no handler do gesto para o iOS Safari aceitar o som.
+      const evs = ['pointerdown', 'touchstart', 'click', 'keydown', 'wheel', 'scroll'];
+      const onFirst = () => {
+        if (!audio.paused) { evs.forEach((ev) => window.removeEventListener(ev, onFirst)); return; }
+        autoStarting = true;
+        const p = audio.play();
+        if (p && p.then) p.then(() => {
+          evs.forEach((ev) => window.removeEventListener(ev, onFirst));
+        }).catch(() => { autoStarting = false; });
+        setTimeout(() => { autoStarting = false; }, 500);
+      };
+      evs.forEach((ev) => window.addEventListener(ev, onFirst, { passive: true }));
     }
   }
 
